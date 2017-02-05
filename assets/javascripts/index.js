@@ -2,20 +2,25 @@
 
 const controller = {
   add: function () {
-    console.log('WAT')
     $('.dice').append('<div class="die">0</div>')
   },
   roll: function () {
     $('.die').each(function (k, die) {
-      $(die).text(model.randomVal())
+
     })
   }
 }
 
 const model = {
-  randomVal: function () {
-    var value = Math.floor((Math.random() * 6) + 1)
+  random: function () {
+    let value = Math.floor((Math.random() * 6) + 1)
     return value
+  }
+}
+
+const view = {
+  addNumber: function (die) {
+    $(die).text(model.random())
   }
 }
 
